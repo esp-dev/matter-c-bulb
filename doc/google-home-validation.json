@@ -1,0 +1,490 @@
+{
+  "date": "2026-10-26",
+  "target": "ESP32-C6-DevKitM-1 COM23",
+  "firmware_version": 17,
+  "variant": "develop",
+  "uart_baud": 1000000,
+  "idf": "6.1",
+  "build_epoch": 1792968614,
+  "matter_commit": "a4f7d34db20ff657f8de8a428c59a42ddebd7fdd",
+  "app_only_flash_offset": "0xc0000",
+  "factory_nvs_matter_preserved": true,
+  "google_home_result": "CommissioningComplete and durable LKG publication observed; user confirmed bulb visible and app control working before ordinary restart",
+  "windows_core_focused_ctest": {
+    "passed": 4,
+    "total": 4
+  },
+  "windows_product_ctest": {
+    "passed": 4,
+    "total": 4
+  },
+  "linux_core_normal_ctest": {
+    "passed": 120,
+    "total": 120
+  },
+  "linux_core_sanitizer_ctest": {
+    "passed": 120,
+    "total": 120
+  },
+  "linux_product_ctest_each_profile": {
+    "passed": 4,
+    "total": 4
+  },
+  "not_repeated": [
+    "release",
+    "OTA installation/reboot",
+    "DHCP fault scenarios",
+    "COM24",
+    "long-duration Google Home soak",
+    "Apple Home",
+    "original CSA campaign",
+    "Google Home control after ordinary restart"
+  ],
+  "artifact": {
+    "file": "output/develop17-ble/matter_c_bulb.bin",
+    "bytes": 1642496,
+    "sha256": "d3eec978e69ba5e015085c0f40d3ad508f1acc912cae6e618880513c0d957d2f"
+  },
+  "stack_frames_bytes": {
+    "not_before": 128,
+    "bulb_clock_update": 48,
+    "store_clock": 32,
+    "utc": 64,
+    "app_main": 656,
+    "country_sync": 80,
+    "bulb_country_apply": 48,
+    "bulb_country_supported": 32,
+    "radio_country": 32
+  },
+  "desktop_identity": {
+    "vid": "0xFFF1",
+    "pid": "0x8001"
+  },
+  "bulb_identity": {
+    "vid": "0xFFF1",
+    "pid": "0x8000"
+  },
+  "user_confirmed": {
+    "hub_app_control": true,
+    "phone_on_same_wifi": true,
+    "previous_desktop_pairing": true,
+    "missing_bulb_developer_integration_added": true
+  },
+  "ordinary_bulb_restart_preserved_state": true,
+  "previous_candidate": {
+    "version": 15,
+    "artifact": {
+      "file": "output/develop15-ble/matter_c_bulb.bin",
+      "bytes": 1642496,
+      "sha256": "53bd112abbf9b96cc09386007da9b5d7ebd24606630d57cf7bf1d2025dd60493"
+    },
+    "regression": [
+      {
+        "name": "normal-build",
+        "passed": true,
+        "seconds": 6.3
+      },
+      {
+        "name": "normal-ctest",
+        "passed": true,
+        "seconds": 15.92
+      },
+      {
+        "name": "memcheck-runtime",
+        "passed": true,
+        "seconds": 12.16
+      },
+      {
+        "name": "memcheck-server-time",
+        "passed": true,
+        "seconds": 6.72
+      },
+      {
+        "name": "memcheck-credentials",
+        "passed": true,
+        "seconds": 8.86
+      },
+      {
+        "name": "pair-memcheck-controller",
+        "passed": true,
+        "seconds": 32.22
+      },
+      {
+        "name": "pair-memcheck",
+        "passed": true,
+        "seconds": 37.78
+      },
+      {
+        "name": "sanitize-build",
+        "passed": true,
+        "seconds": 19.65
+      },
+      {
+        "name": "sanitize-ctest",
+        "passed": true,
+        "seconds": 44.62
+      },
+      {
+        "name": "pair-sanitize-controller",
+        "passed": true,
+        "seconds": 17.48
+      },
+      {
+        "name": "pair-sanitize",
+        "passed": true,
+        "seconds": 18.66
+      },
+      {
+        "name": "google-home-lkg-complete",
+        "passed": true,
+        "seconds": 0
+      },
+      {
+        "name": "product-normal-configure",
+        "passed": true,
+        "seconds": 0.28
+      },
+      {
+        "name": "product-normal-build",
+        "passed": true,
+        "seconds": 0.33
+      },
+      {
+        "name": "product-normal-ctest",
+        "passed": true,
+        "seconds": 0.05
+      },
+      {
+        "name": "product-memcheck-clock",
+        "passed": true,
+        "seconds": 0.51
+      },
+      {
+        "name": "product-sanitize-configure",
+        "passed": true,
+        "seconds": 0.4
+      },
+      {
+        "name": "product-sanitize-build",
+        "passed": true,
+        "seconds": 0.44
+      },
+      {
+        "name": "product-sanitize-ctest",
+        "passed": true,
+        "seconds": 0.07
+      },
+      {
+        "name": "google-home-lkg-product-complete",
+        "passed": true,
+        "seconds": 0
+      }
+    ]
+  },
+  "time_policy_commit": "79cdbb5233a249bad5a10e9f8ccab1b6519e78e6",
+  "wifi": {
+    "target_channel": 13,
+    "authentication": "WPA3-Personal",
+    "commissioner_country": "US",
+    "ap_country_ie": "CH",
+    "policy": "802.11d AUTO",
+    "associated_after_restart": true,
+    "restart_attempt_disconnect_reasons": [
+      2,
+      15
+    ],
+    "after_restart_http_status": 200,
+    "ap_auth_enum": 7,
+    "negotiated_authentication": "WPA3-SAE HUNT_AND_PECK",
+    "negotiated_dot11_authmode": 6,
+    "pmf": true
+  },
+  "reconnect_association_ms": 16293,
+  "heap_observations": [
+    {
+      "free": 167380,
+      "min": 167380,
+      "largest": 151552,
+      "stack_free": 9320,
+      "fabrics": 0,
+      "online": 0,
+      "after_restart": false
+    },
+    {
+      "free": 163784,
+      "min": 145208,
+      "largest": 131072,
+      "stack_free": 9320,
+      "fabrics": 0,
+      "online": 0,
+      "after_restart": false
+    },
+    {
+      "free": 174428,
+      "min": 124432,
+      "largest": 131072,
+      "stack_free": 9256,
+      "fabrics": 1,
+      "online": 1,
+      "after_restart": false
+    },
+    {
+      "free": 178360,
+      "min": 124432,
+      "largest": 131072,
+      "stack_free": 9256,
+      "fabrics": 1,
+      "online": 1,
+      "after_restart": false
+    },
+    {
+      "free": 178360,
+      "min": 124432,
+      "largest": 131072,
+      "stack_free": 9256,
+      "fabrics": 1,
+      "online": 1,
+      "after_restart": false
+    },
+    {
+      "free": 178360,
+      "min": 124432,
+      "largest": 131072,
+      "stack_free": 9256,
+      "fabrics": 1,
+      "online": 1,
+      "after_restart": false
+    },
+    {
+      "free": 171792,
+      "min": 124432,
+      "largest": 131072,
+      "stack_free": 9256,
+      "fabrics": 1,
+      "online": 1,
+      "after_restart": false
+    },
+    {
+      "free": 174604,
+      "min": 124432,
+      "largest": 131072,
+      "stack_free": 9256,
+      "fabrics": 1,
+      "online": 1,
+      "after_restart": false
+    },
+    {
+      "free": 178480,
+      "min": 124432,
+      "largest": 131072,
+      "stack_free": 9256,
+      "fabrics": 1,
+      "online": 1,
+      "after_restart": false
+    },
+    {
+      "free": 196468,
+      "min": 183516,
+      "largest": 180224,
+      "stack_free": 9288,
+      "fabrics": 1,
+      "online": 0,
+      "after_restart": true
+    },
+    {
+      "free": 184880,
+      "min": 181532,
+      "largest": 167936,
+      "stack_free": 9288,
+      "fabrics": 1,
+      "online": 1,
+      "after_restart": true
+    },
+    {
+      "free": 184884,
+      "min": 181532,
+      "largest": 167936,
+      "stack_free": 9288,
+      "fabrics": 1,
+      "online": 1,
+      "after_restart": true
+    },
+    {
+      "free": 177620,
+      "min": 153512,
+      "largest": 151552,
+      "stack_free": 9256,
+      "fabrics": 1,
+      "online": 1,
+      "after_restart": true
+    },
+    {
+      "free": 178900,
+      "min": 153512,
+      "largest": 151552,
+      "stack_free": 9256,
+      "fabrics": 1,
+      "online": 1,
+      "after_restart": true
+    },
+    {
+      "free": 178468,
+      "min": 153512,
+      "largest": 151552,
+      "stack_free": 9256,
+      "fabrics": 1,
+      "online": 1,
+      "after_restart": true
+    },
+    {
+      "free": 178468,
+      "min": 153512,
+      "largest": 151552,
+      "stack_free": 9256,
+      "fabrics": 1,
+      "online": 1,
+      "after_restart": true
+    },
+    {
+      "free": 178912,
+      "min": 153512,
+      "largest": 151552,
+      "stack_free": 9256,
+      "fabrics": 1,
+      "online": 1,
+      "after_restart": true
+    },
+    {
+      "free": 178724,
+      "min": 153512,
+      "largest": 151552,
+      "stack_free": 9256,
+      "fabrics": 1,
+      "online": 1,
+      "after_restart": true
+    }
+  ],
+  "minimum_free_heap_before_restart": 124432,
+  "http_after_restart": {
+    "identity": true,
+    "fabrics": 1,
+    "wifi": true,
+    "version": 17,
+    "free_heap": 177948,
+    "minimum_heap": 153512,
+    "largest_block": 151552
+  },
+  "regression": [
+    {
+      "name": "normal-build",
+      "passed": true,
+      "seconds": 0.04
+    },
+    {
+      "name": "normal-ctest",
+      "passed": true,
+      "seconds": 15.5
+    },
+    {
+      "name": "memcheck-runtime",
+      "passed": true,
+      "seconds": 9.92
+    },
+    {
+      "name": "memcheck-server-time",
+      "passed": true,
+      "seconds": 5.83
+    },
+    {
+      "name": "memcheck-credentials",
+      "passed": true,
+      "seconds": 7.77
+    },
+    {
+      "name": "pair-memcheck-controller",
+      "passed": true,
+      "seconds": 27.9
+    },
+    {
+      "name": "pair-memcheck",
+      "passed": true,
+      "seconds": 32.65
+    },
+    {
+      "name": "sanitize-build",
+      "passed": true,
+      "seconds": 0.05
+    },
+    {
+      "name": "sanitize-ctest",
+      "passed": true,
+      "seconds": 45.21
+    },
+    {
+      "name": "pair-sanitize-controller",
+      "passed": true,
+      "seconds": 17.31
+    },
+    {
+      "name": "pair-sanitize",
+      "passed": true,
+      "seconds": 18.55
+    },
+    {
+      "name": "google-home-country-core-complete",
+      "passed": true,
+      "seconds": 0
+    },
+    {
+      "name": "product-normal-configure",
+      "passed": true,
+      "seconds": 0.33
+    },
+    {
+      "name": "product-normal-build",
+      "passed": true,
+      "seconds": 0.47
+    },
+    {
+      "name": "product-normal-ctest",
+      "passed": true,
+      "seconds": 0.03
+    },
+    {
+      "name": "product-memcheck-clock",
+      "passed": true,
+      "seconds": 0.55
+    },
+    {
+      "name": "product-sanitize-configure",
+      "passed": true,
+      "seconds": 0.34
+    },
+    {
+      "name": "product-sanitize-build",
+      "passed": true,
+      "seconds": 0.55
+    },
+    {
+      "name": "product-sanitize-ctest",
+      "passed": true,
+      "seconds": 0.15
+    },
+    {
+      "name": "google-home-country-product-complete",
+      "passed": true,
+      "seconds": 0
+    },
+    {
+      "name": "product-memcheck-country",
+      "passed": true,
+      "seconds": 0.46
+    }
+  ],
+  "changed_source_sha256": {
+    "main/app_main.c": "7478a055043061e2440d9ca2641a19ec42c5035a90b2a4c81dccce73e3a32379",
+    "main/bulb_country.c": "3be1b2e6501e3eda16d6a0295da85ed062425e825ae40633e070517be9a98843",
+    "main/bulb_country.h": "3e3ac7bcffa951178cf630769939b02235d81bcd80074c533c03ef51f954991a",
+    "tests/test_bulb_country.c": "8bb30e86a94a5a59a43c3c5da9605cc4b51f6f2d7517f24e5041aff166ada6b8"
+  }
+}

@@ -1,0 +1,5 @@
+#ifndef TEST_ESP_ERR_H
+#define TEST_ESP_ERR_H
+typedef int esp_err_t;
+enum {ESP_OK=0,ESP_ERR_NO_MEM=1,ESP_ERR_INVALID_SIZE=2,ESP_ERR_NVS_NOT_FOUND=3,ESP_ERR_NVS_REMOVE_FAILED=4};
+#endif

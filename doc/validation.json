@@ -1,0 +1,303 @@
+{
+  "schema": 1,
+  "date": "2026-10-25",
+  "status": "engineering prototype; not certified",
+  "target": "ESP32-C6-DevKitM-1 / WS2812 GPIO8 / COM23",
+  "reference_COM24_modified": false,
+  "idf": "6.1",
+  "mdns": "1.14.0",
+  "application_code_commit": "1e68776d44ce6480482dea8fcd16e07be06b9e79",
+  "matter_commit": "21859f96dfced05f927d58888f31c22f61ed0313",
+  "matter_branch": "work/bulb-integration in main repository; separate dirty CSA75 checkout preserved",
+  "physical_factory_identity": "individual development TEST FFF1/8000; production identity not supplied",
+  "firmware_version": 6,
+  "artifacts": {
+    "bootloader.bin": {
+      "bytes": 14432,
+      "sha256": "347666d90966829dfa2f68288957a9261b124e6c72e78f2861e6bba89de47179"
+    },
+    "firmware.bin": {
+      "bytes": 1249280,
+      "sha256": "2b232659ff1a7b1de08b9987d66d290b6ba551a85371e9656581b3de173b5337"
+    },
+    "firmware.ota": {
+      "bytes": 1249357,
+      "sha256": "db9d5804d65f353de587a718315ad4ea1be055d741c71e5e1df8ad8fe9e68f68"
+    },
+    "ota_data_initial.bin": {
+      "bytes": 8192,
+      "sha256": "7d2c7ac4888bfd75cd5f56e8d61f69595121183afc81556c876732fd3782c62f"
+    },
+    "partition-table.bin": {
+      "bytes": 3072,
+      "sha256": "ba23fcd5bf09c9a4cab838017108f235d66a4447f7c9cac14a13f81a25dfa4ef"
+    }
+  },
+  "portable_application_tests": {
+    "ctest_passed": 2,
+    "ctest_total": 2,
+    "bridge_parser_tests_passed": 2,
+    "independent_QR_manual_decoder_passed": true
+  },
+  "library": {
+    "native_definitions": 117,
+    "linux_normal_ctest_passed": 119,
+    "linux_sanitized_ctest_passed": 119,
+    "memcheck_focused_fixtures": 14,
+    "two_instance_lifecycle_memcheck": true,
+    "two_instance_lifecycle_separate_ASan_UBSan_LSan": true,
+    "final_wire_after_memcheck": true,
+    "final_wire_after_separate_sanitizers": true,
+    "wire_note": "Six faulted wire cases passed on earlier profile snapshots; final after-case rerun on MRP fix. Regulatory-default-only correction has a fresh full native/two-node run, not another six-case wire sweep.",
+    "windows_note": "122-case earlier full batch had three UDP receive timeouts; those three passed serially outside sandbox. Focused dispatcher/runtime/OOM runs passed after later changes.",
+    "compiler_warnings_in_final_product_builds": 0
+  },
+  "physical": {
+    "factory_rejection_checks_commissioned_develop": 7,
+    "factory_rejection_checks_uncommissioned_develop": 8,
+    "factory_rejection_checks_release5": 8,
+    "five_EN_resets_interval_seconds": 3,
+    "after_five_resets": {
+      "identity": true,
+      "fabrics": 0,
+      "wifi": false,
+      "version": 4
+    },
+    "real_power_removal_tested": false,
+    "factory_identity_and_original_onboarding_survived_reset": true,
+    "PL_commissioning_and_eight_lighting_scene_identify_checks": true,
+    "three_path_subscription_reports": 18,
+    "unexpected_subscription_closures_in_lighting_acceptance": 0,
+    "stock_chip_tool_release5_commissioning_with_attestation": true,
+    "stock_chip_tool_transport": "Byte-preserving SSH/UDP bridge and operational DNS-SD alias; not native VM-to-WLAN routing/discovery",
+    "network": {
+      "short_AP_ban_ms": 2000,
+      "long_AP_ban_ms": 20000,
+      "checks": [
+        {
+          "name": "two-fabrics-and-live-subscription",
+          "passed": true
+        },
+        {
+          "name": "priming-response-ACK-drained-data-and-heartbeat-before-fault",
+          "passed": true
+        },
+        {
+          "name": "short-WiFi-loss-reconnect-reports-and-fabric-retention",
+          "passed": true
+        },
+        {
+          "name": "long-WiFi-loss-new-CASE-and-post-reconnect-control",
+          "passed": true
+        },
+        {
+          "name": "resubscribe-updates-and-heartbeat-after-long-loss",
+          "passed": true
+        }
+      ],
+      "reports": 3,
+      "updates": 5,
+      "short_loss_closures": 0
+    },
+    "external_wifi_provision_retained_two_fabrics": true,
+    "own_fabric_removal_replied_before_reset_on_release5_and6": true,
+    "signed_OTA_4_to_5_passed": true,
+    "signed_OTA_5_to_6": {
+      "passed": true,
+      "previousVersion": 5,
+      "version": 6,
+      "queries": 2,
+      "applies": 1,
+      "notifications": 1,
+      "regulatoryAfterBoot": 2,
+      "locationCapability": 2
+    },
+    "interrupted_OTA6_attempt": {
+      "observed": true,
+      "downloaded_bytes": 873472,
+      "progress_percent": 70,
+      "provider_error": "Peer timeout during BDX",
+      "device_rebooted": false,
+      "old_version_retained": 5,
+      "fabric_retained": 1,
+      "download_error_emitted": true,
+      "retry_without_code_change_completed": true,
+      "root_cause": "Not isolated; retain as open intermittent lab observation, not a confirmed new stack defect."
+    },
+    "release_UART": [
+      {
+        "baud": 115200,
+        "bytes": 230,
+        "application_or_sdk_logs": false,
+        "rom_banner": true,
+        "passed": true
+      },
+      {
+        "baud": 1000000,
+        "bytes": 683,
+        "application_or_sdk_logs": false,
+        "rom_banner": false,
+        "passed": true
+      }
+    ],
+    "final_state": {
+      "identity": true,
+      "fabrics": 0,
+      "wifi": true,
+      "version": 6,
+      "free_heap": 207124,
+      "minimum_heap": 196860,
+      "largest_block": 188416
+    }
+  },
+  "quick_CSA_YAML": {
+    "scope": "unchanged upstream YAML on physical C6; engineering regression, not certification",
+    "tested_firmware_version": 5,
+    "latest6_delta": "Only initial general-commissioning regulatory default changes in runtime; final6 additionally passed real OTA, post-boot attribute/control checks and UART test. The nine lighting cases were not rerun on6.",
+    "sdk_commit": "3bcdd56ba54fb88b2afb4bfef575014671df7aa7",
+    "pics_sha256": "a393fba5873555f518f5bdfe7401ad94fdd1beb8926a14ba4f055ca6bf2afae7",
+    "test_files_matched_git_HEAD": true,
+    "cases": [
+      {
+        "id": "TC-OO-2.1",
+        "source_sha256": "9b0a0b48e2a7c5385bfa06352d7030804d564a760bce61f6fd2514bec430bbd1",
+        "exit_code": 0,
+        "passed": true,
+        "checks": 25,
+        "errors": 0,
+        "warnings": 0,
+        "steps": 12,
+        "skipped": 0,
+        "seconds": 3.21
+      },
+      {
+        "id": "TC-OO-2.2",
+        "source_sha256": "ad81d77d9d038dceb9473827c352908dc1c8e722e61b3ba6c85bae7d3c05f22b",
+        "exit_code": 0,
+        "passed": true,
+        "checks": 29,
+        "errors": 0,
+        "warnings": 0,
+        "steps": 22,
+        "skipped": 4,
+        "seconds": 11.37
+      },
+      {
+        "id": "TC-LVL-2.1",
+        "source_sha256": "f7f7a6533453b99d032c3ed2bb4ecceae349fd206a69982ef9bfe895ec6592d0",
+        "exit_code": 0,
+        "passed": true,
+        "checks": 35,
+        "errors": 0,
+        "warnings": 0,
+        "steps": 9,
+        "skipped": 13,
+        "seconds": 3.02
+      },
+      {
+        "id": "TC-LVL-2.2",
+        "source_sha256": "0a7182716c077f69864ec06d7f09b468938b8cb0804f01a4e2f8b52ca05d22f8",
+        "exit_code": 0,
+        "passed": true,
+        "checks": 21,
+        "errors": 0,
+        "warnings": 0,
+        "steps": 7,
+        "skipped": 13,
+        "seconds": 3.05
+      },
+      {
+        "id": "TC-CC-3.1",
+        "source_sha256": "01de9ad72b25f154147f81ac7f6812e1a231309e6a1e8ef8ac75fdfa65ca6e13",
+        "exit_code": 0,
+        "passed": true,
+        "checks": 90,
+        "errors": 0,
+        "warnings": 0,
+        "steps": 51,
+        "skipped": 0,
+        "seconds": 148.34
+      },
+      {
+        "id": "TC-CC-4.1",
+        "source_sha256": "a78bd719eeb22067a53c1359013ec30b93f99be91c9e26dae269b934b7afe882",
+        "exit_code": 0,
+        "passed": true,
+        "checks": 33,
+        "errors": 0,
+        "warnings": 0,
+        "steps": 18,
+        "skipped": 0,
+        "seconds": 39.82
+      },
+      {
+        "id": "TC-CC-5.1",
+        "source_sha256": "3e0bd49e856da1b35ee6c5a08d38cad124252649c15bfaa5047dd3114f74decb",
+        "exit_code": 0,
+        "passed": true,
+        "checks": 112,
+        "errors": 0,
+        "warnings": 0,
+        "steps": 61,
+        "skipped": 0,
+        "seconds": 33.65
+      },
+      {
+        "id": "TC-CC-6.1",
+        "source_sha256": "b93599422733a6a5f0f3fb8871b7dae2b27270b3903e7eea69d3973111996d79",
+        "exit_code": 0,
+        "passed": true,
+        "checks": 48,
+        "errors": 0,
+        "warnings": 0,
+        "steps": 22,
+        "skipped": 0,
+        "seconds": 44.89
+      },
+      {
+        "id": "TC-CC-8.1",
+        "source_sha256": "bba419d20631b5b446c9ee3965e0a0001ae33c14cd237ea53be2a9c408c8038d",
+        "exit_code": 0,
+        "passed": true,
+        "checks": 56,
+        "errors": 0,
+        "warnings": 0,
+        "steps": 35,
+        "skipped": 4,
+        "seconds": 57.89
+      }
+    ],
+    "total_checks": 449,
+    "steps_run": 237,
+    "steps_skipped_by_PICS": 34,
+    "seconds": 345.24
+  },
+  "memory_observations": {
+    "scope": "Total SDK MALLOC_CAP_8BIT heap including Wi-Fi/AP/HTTP and heap-allocated task stacks, measured on develop4. Bounded1-2-fabric scenarios, not an all-limits memory proof. No system-wide C6 OOM injection.",
+    "reconnect_two_fabrics_min_free_heap_bytes": 178440,
+    "OTA_4_to_5_min_free_heap_before_reboot_bytes": 180912,
+    "OTA_4_to_5_sampled_largest_free_block_before_reboot_bytes": 167936,
+    "main_task_stack_bytes": 12288,
+    "OTA_4_to_5_main_task_min_free_stack_bytes": 8824,
+    "main_task_max_observed_used_stack_bytes": 3464,
+    "largest_block_note": "Instantaneous samples, not a continuously captured minimum contiguous block.",
+    "final_release6_uncommissioned_state_heap": {
+      "free_heap": 207124,
+      "minimum_heap": 196860,
+      "largest_block": 188416
+    }
+  },
+  "remaining_gates": [
+    "Manual Apple Home and Google Home acceptance",
+    "Assigned production VID/PID and certified DAC/PAI/CD/PAA provisioning",
+    "Complete lighting and groupcast certification campaign; physical multicast group traffic not yet exercised",
+    "Production trusted-time/last-known-good-time policy; current application uses build UTC",
+    "ROM startup output is retained; no irreversible eFuse changes",
+    "No physical power-cut OTA campaign repeated for this product; inherited native OTA negative-case evidence is separate",
+    "Unisolated single BDX timeout at70percent; safe error/retry was physically verified"
+  ],
+  "publication": {
+    "local_repositories_created": true,
+    "pushed": false
+  }
+}

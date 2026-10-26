@@ -1,0 +1,5 @@
+menu "Matter RGB bulb"
+config BULB_DEVELOP
+    bool "Development logging"
+    default y
+endmenu

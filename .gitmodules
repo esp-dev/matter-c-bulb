@@ -1,0 +1,3 @@
+[submodule "matter"]
+	path = matter
+	url = https://github.com/esp-dev/matter-c.git

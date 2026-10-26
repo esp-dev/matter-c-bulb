@@ -1,0 +1,287 @@
+{
+  "schema": 1,
+  "date": "2026-10-25",
+  "scope": "engineering regression; not certification",
+  "target": "ESP32-C6-DevKitM-1 COM23",
+  "com24_modified": false,
+  "idf": "6.1",
+  "mdns": "1.14.0",
+  "matter_commit": "4c4fb5c74931f00d9d5ae6c522458c8ab14bb2e4",
+  "final_firmware_version": 12,
+  "full_network_regression_versions": [
+    8,
+    9
+  ],
+  "ota_installation": {
+    "from_version": 8,
+    "to_version": 9,
+    "official_chip_provider": true,
+    "provider_modified": false,
+    "requestor_node_id": 81,
+    "full_attestation": true,
+    "signed_install": true,
+    "reboot": true,
+    "notify_update_applied": true,
+    "fabrics_retained": 2,
+    "bdx_seconds": 331
+  },
+  "commissioning": {
+    "real_ble": true,
+    "second_fabric_ble": true,
+    "attestation_bypass": false,
+    "udp_pase_denied_in_open_ble_window": true,
+    "nimble_same_instance_window_cycles": 2
+  },
+  "network": {
+    "cold_start_without_dhcpv4": true,
+    "actual_ack_lease_seconds": 120,
+    "lease_expiry": true,
+    "ipv6_read_control_reports_without_ipv4": true,
+    "automatic_dhcp_recovery": true,
+    "wifi_ban_seconds": [
+      2,
+      20
+    ],
+    "http_offline_listener_stopped": true,
+    "http_auth_statuses": [
+      403,
+      403,
+      200
+    ],
+    "long_ban_auto_resubscription": true,
+    "bridge_address_selection_timing_limit": true
+  },
+  "tests": {
+    "windows_ctest": [
+      123,
+      123
+    ],
+    "linux_normal_ctest": [
+      120,
+      120
+    ],
+    "linux_sanitized_ctest": [
+      120,
+      120
+    ],
+    "product_ctest": [
+      2,
+      2
+    ],
+    "focused_memcheck": 8,
+    "two_runtime_memcheck": true,
+    "two_runtime_separate_sanitizers": true,
+    "ota_metadata_shape_windows_linux_memcheck_sanitizers": true,
+    "quick_yaml": {
+      "scope": "unchanged upstream YAML on physical C6; engineering regression, not certification",
+      "sdk": "3bcdd56ba54fb88b2afb4bfef575014671df7aa7",
+      "pics_sha256": "a393fba5873555f518f5bdfe7401ad94fdd1beb8926a14ba4f055ca6bf2afae7",
+      "cases": [
+        {
+          "id": "TC-OO-2.1",
+          "source_sha256": "9b0a0b48e2a7c5385bfa06352d7030804d564a760bce61f6fd2514bec430bbd1",
+          "exit_code": 0,
+          "passed": true,
+          "checks": 25,
+          "errors": 0,
+          "warnings": 0,
+          "steps": 12,
+          "skipped": 0,
+          "seconds": 3.32
+        },
+        {
+          "id": "TC-OO-2.2",
+          "source_sha256": "ad81d77d9d038dceb9473827c352908dc1c8e722e61b3ba6c85bae7d3c05f22b",
+          "exit_code": 0,
+          "passed": true,
+          "checks": 29,
+          "errors": 0,
+          "warnings": 0,
+          "steps": 22,
+          "skipped": 4,
+          "seconds": 10.87
+        },
+        {
+          "id": "TC-LVL-2.1",
+          "source_sha256": "f7f7a6533453b99d032c3ed2bb4ecceae349fd206a69982ef9bfe895ec6592d0",
+          "exit_code": 0,
+          "passed": true,
+          "checks": 35,
+          "errors": 0,
+          "warnings": 0,
+          "steps": 9,
+          "skipped": 13,
+          "seconds": 3.3
+        },
+        {
+          "id": "TC-LVL-2.2",
+          "source_sha256": "0a7182716c077f69864ec06d7f09b468938b8cb0804f01a4e2f8b52ca05d22f8",
+          "exit_code": 0,
+          "passed": true,
+          "checks": 21,
+          "errors": 0,
+          "warnings": 0,
+          "steps": 7,
+          "skipped": 13,
+          "seconds": 3.28
+        },
+        {
+          "id": "TC-CC-3.1",
+          "source_sha256": "01de9ad72b25f154147f81ac7f6812e1a231309e6a1e8ef8ac75fdfa65ca6e13",
+          "exit_code": 0,
+          "passed": true,
+          "checks": 90,
+          "errors": 0,
+          "warnings": 0,
+          "steps": 51,
+          "skipped": 0,
+          "seconds": 145.64
+        },
+        {
+          "id": "TC-CC-4.1",
+          "source_sha256": "a78bd719eeb22067a53c1359013ec30b93f99be91c9e26dae269b934b7afe882",
+          "exit_code": 0,
+          "passed": true,
+          "checks": 33,
+          "errors": 0,
+          "warnings": 0,
+          "steps": 18,
+          "skipped": 0,
+          "seconds": 111.78
+        },
+        {
+          "id": "TC-CC-5.1",
+          "source_sha256": "3e0bd49e856da1b35ee6c5a08d38cad124252649c15bfaa5047dd3114f74decb",
+          "exit_code": 0,
+          "passed": true,
+          "checks": 112,
+          "errors": 0,
+          "warnings": 0,
+          "steps": 61,
+          "skipped": 0,
+          "seconds": 32.78
+        },
+        {
+          "id": "TC-CC-6.1",
+          "source_sha256": "b93599422733a6a5f0f3fb8871b7dae2b27270b3903e7eea69d3973111996d79",
+          "exit_code": 0,
+          "passed": true,
+          "checks": 48,
+          "errors": 0,
+          "warnings": 0,
+          "steps": 22,
+          "skipped": 0,
+          "seconds": 44.18
+        },
+        {
+          "id": "TC-CC-8.1",
+          "source_sha256": "bba419d20631b5b446c9ee3965e0a0001ae33c14cd237ea53be2a9c408c8038d",
+          "exit_code": 0,
+          "passed": true,
+          "checks": 56,
+          "errors": 0,
+          "warnings": 0,
+          "steps": 35,
+          "skipped": 4,
+          "seconds": 56.33
+        }
+      ]
+    },
+    "quick_yaml_final12": {
+      "scope": "unchanged upstream YAML on physical C6; engineering regression, not certification",
+      "sdk": "3bcdd56ba54fb88b2afb4bfef575014671df7aa7",
+      "pics_sha256": "a393fba5873555f518f5bdfe7401ad94fdd1beb8926a14ba4f055ca6bf2afae7",
+      "cases": [
+        {
+          "id": "TC-OO-2.1",
+          "source_sha256": "9b0a0b48e2a7c5385bfa06352d7030804d564a760bce61f6fd2514bec430bbd1",
+          "exit_code": 0,
+          "passed": true,
+          "checks": 25,
+          "errors": 0,
+          "warnings": 0,
+          "steps": 12,
+          "skipped": 0,
+          "seconds": 3.18
+        },
+        {
+          "id": "TC-LVL-2.1",
+          "source_sha256": "f7f7a6533453b99d032c3ed2bb4ecceae349fd206a69982ef9bfe895ec6592d0",
+          "exit_code": 0,
+          "passed": true,
+          "checks": 35,
+          "errors": 0,
+          "warnings": 0,
+          "steps": 9,
+          "skipped": 13,
+          "seconds": 3.13
+        },
+        {
+          "id": "TC-CC-7.1",
+          "source_sha256": "66d33c99c61a91d6589abb8609d0a42411f7a3898af0d11d515ebb3bcf7da768",
+          "exit_code": 0,
+          "passed": true,
+          "checks": 5,
+          "errors": 0,
+          "warnings": 0,
+          "steps": 4,
+          "skipped": 47,
+          "seconds": 2.85
+        }
+      ]
+    }
+  },
+  "measurements": {
+    "all_boots_minimum_heap": 115780,
+    "main_task_minimum_unused_stack": 8712,
+    "post_ota_sample": {
+      "unix_ms": 1792967264716,
+      "free": 181440,
+      "minimum": 156056,
+      "largest": 163840,
+      "stack_free": 9272,
+      "fabrics": 2,
+      "online": 1
+    }
+  },
+  "final_smoke": {
+    "version": 12,
+    "real_ble_no_dhcp": true,
+    "attestation_bypass": false,
+    "read_control": true,
+    "automatic_dhcp_recovery": true,
+    "offline_warning_flood_absent": true,
+    "flashed_hash_verified": true,
+    "offline_ble_advertising": true,
+    "zero_fabrics": true,
+    "no_ipv4": true,
+    "http_not_started": true,
+    "single_initial_sdk_warning": true,
+    "subscription_established": true,
+    "subscription_reports": 26,
+    "changed_value_reported": true
+  },
+  "limitations": [
+    "No manual Apple/Google Home test",
+    "No release built or tested",
+    "No CSA certification claim",
+    "No new SDK-wide OOM injection",
+    "CHIP example sends invalid empty OTA metadata for even requestor IDs; strict rejection retained",
+    "Optional outgoing query may time out when all CASE slots are occupied",
+    "Full network/OTA/YAML on develop8/9; develop12 adds ready-check order, correct absent-record interface default and SDK state traces; final BLE/no-DHCP/control/subscription/three YAML cases passed"
+  ],
+  "artifacts": {
+    "application": {
+      "bytes": 1642496,
+      "sha256": "e4d74e2df86be35f9fdde45011e5dc792e215b10f0107e1dc44a4c7b9af6d7ad"
+    },
+    "partition_table": {
+      "bytes": 3072,
+      "sha256": "ba23fcd5bf09c9a4cab838017108f235d66a4447f7c9cac14a13f81a25dfa4ef"
+    },
+    "ota_develop9": {
+      "bytes": 1642573,
+      "sha256": "510b4d50fd155567a9fc7ebd151494ad2a7da68ba519f5ec303f894c879a3004"
+    }
+  }
+}
